@@ -54,7 +54,7 @@ Create a **.env** file in the `nestjs-backend` folder and add your database cred
 
 ```env
 DATABASE_URL="postgresql://menu_management_db_xabb_user:1ZBhQao5TeNe45zk3CyDsbhZUSBkUm62@dpg-cuqcrmtds78s739b6b8g-a.oregon-postgres.render.com/menu_management_db_xabb?schema=public"
-PORT=5000
+PORT=3001
 ```
 
 ### 📌 Run Migrations
