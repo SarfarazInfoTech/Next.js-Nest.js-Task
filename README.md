@@ -54,7 +54,7 @@ Create a **.env** file in the `nestjs-backend` folder and add your database cred
 
 ```env
 DATABASE_URL="postgresql://menu_management_db_xabb_user:1ZBhQao5TeNe45zk3CyDsbhZUSBkUm62@dpg-cuqcrmtds78s739b6b8g-a.oregon-postgres.render.com/menu_management_db_xabb?schema=public"
-PORT=3001
+PORT=3000
 ```
 
 ### 📌 Run Migrations
@@ -69,7 +69,7 @@ npx prisma migrate dev --name init
 npm run start:dev
 ```
 
-The backend will be running on `http://localhost:5000`
+The backend will be running on `http://localhost:3000`
 
 ---
 
@@ -87,7 +87,7 @@ npm install
 Create a **.env.local** file in the `nextjs-app` folder and set the API URL:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/menus
+NEXT_PUBLIC_API_URL=http://localhost:3001/menus
 ```
 
 ### ▶ Start the Development Server
@@ -96,7 +96,7 @@ NEXT_PUBLIC_API_URL=http://localhost:5000/menus
 npm run dev
 ```
 
-The frontend will be running on `http://localhost:3000`
+The frontend will be running on `http://localhost:3001`
 
 ---
 
