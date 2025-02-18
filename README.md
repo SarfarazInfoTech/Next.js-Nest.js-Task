@@ -116,7 +116,7 @@ The frontend will be running on `http://localhost:3001`
 
 ✅ **Backend**: REST API with Nest.js, PostgreSQL, Prisma ORM\
 ✅ **Frontend**: Next.js app with Tailwind UI\
-✅ **Authentication** (if applicable)\
+✅ **Authentication** (no applicable)\
 ✅ **CRUD Operations**
 
 ---
