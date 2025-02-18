@@ -1,5 +1,6 @@
 "use client";
 
+import { BASE_URL } from "@/uitls/URL";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 
 interface Menu {
@@ -23,7 +24,7 @@ interface MenuState {
 export const fetchMenus = createAsyncThunk<Menu[]>(
   "menu/fetchMenus",
   async () => {
-    const response = await fetch("http://localhost:3000/menus");
+    const response = await fetch(`${BASE_URL}/menus`);
     const data = await response.json();
     return data;
   }
@@ -32,7 +33,7 @@ export const fetchMenus = createAsyncThunk<Menu[]>(
 export const addMenu = createAsyncThunk<Menu, Menu>(
   "menu/addMenu",
   async (menu) => {
-    const response = await fetch(`http://localhost:3000/menus`, {
+    const response = await fetch(`${BASE_URL}/menus`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +49,7 @@ export const addMenu = createAsyncThunk<Menu, Menu>(
 export const updateMenu = createAsyncThunk<Menu, Menu>(
   "menu/updateMenu",
   async (menu) => {
-    const response = await fetch(`http://localhost:3000/menus/${menu.id}`, {
+    const response = await fetch(`${BASE_URL}/menus/${menu.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +65,7 @@ export const updateMenu = createAsyncThunk<Menu, Menu>(
 export const deleteMenu = createAsyncThunk<string, string>(
   "menu/deleteMenu",
   async (id) => {
-    await fetch(`http://localhost:3000/menus/${id}`, {
+    await fetch(`${BASE_URL}/menus/${id}`, {
       method: "DELETE",
     });
 

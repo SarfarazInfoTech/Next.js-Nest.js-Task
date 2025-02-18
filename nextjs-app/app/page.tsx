@@ -1,13 +1,7 @@
 "use client";
 
-import MenusPage from "@/pages/menus/page";
-import { store } from "@/store/store";
-import { Provider } from "react-redux";
+import MenusPage from "@/app/menus/page";
 
 export default function SyntheticV0PageForDeployment() {
-  return (
-    <Provider store={store}>
-      <MenusPage />
-    </Provider>
-  );
+  return <MenusPage />;
 }
