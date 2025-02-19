@@ -157,6 +157,7 @@ export default function MenusPage() {
             <Input
               name={formData?.name}
               value={formData?.name}
+              maxLength={30}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
